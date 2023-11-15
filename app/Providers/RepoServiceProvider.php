@@ -14,10 +14,18 @@ class RepoServiceProvider extends ServiceProvider
     public function register()
     {
         /*** start basic data ***/
-        //Category
+
+
+        //Admin
         $this->app->bind(
-            'App\Repositories\AdminDashboard\Category\CategoryInterface',
-            'App\Repositories\AdminDashboard\Category\CategoryRepository',
+            'App\Repositories\AdminDashboard\Admin\AdminInterface',
+            'App\Repositories\AdminDashboard\Admin\AdminRepository',
+        );
+
+        //Role
+        $this->app->bind(
+            'App\Repositories\AdminDashboard\Role\RoleInterface',
+            'App\Repositories\AdminDashboard\Role\RoleRepository',
         );
 
         //Teacher

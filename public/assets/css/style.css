@@ -52513,3 +52513,4 @@ a.text-dark:hover, a.text-dark:focus {
 /***** this is hide a default paginagion buttons and number of row length to be able to use your manual pagination *****/
 .dataTables_paginate .paginate_button {display: none !important;}
 #example1_length {display: none !important;}
+#example1_info  {display: none !important;}

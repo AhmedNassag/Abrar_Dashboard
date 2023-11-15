@@ -12,6 +12,15 @@ class User extends Model
     protected $table = 'a_users';
     protected $guarded = [];
 
+    //use accessors
+    //this concatenate first_name and last_name to be able to fetch them together by call full_name 
+    public function getFullNameAttribute()
+    {
+        return $this->first_name ." ". $this->last_name;
+    }
+
+
+
     //start relations
     public function country()
     {

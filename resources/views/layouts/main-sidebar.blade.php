@@ -33,31 +33,11 @@
 						</a>
 					</li>
 					<li class="side-item side-item-category">{{ trans('main.General') }}</li>
-					{{-- <li class="slide ">
-						<a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}">
-						<svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24">
-							<path d="M0 0h24v24H0V0z" fill="none"/>
-							<path d="M19 5H5v14h14V5zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z" opacity=".3"/>
-							<path d="M3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2zm2 0h14v14H5V5zm2 5h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/>
-						</svg>
-						<span class="side-menu__label">{{ trans('main.General Data') }}</span><i class="angle fe fe-chevron-down"></i></a>
-						<ul class="slide-menu">
-							<li class="sub-slide">
-								<a class="sub-side-menu__item" data-toggle="sub-slide" href="{{ url('/' . $page='#') }}">
-									<span class="sub-side-menu__label">{{ trans('main.Categories') }}</span>
-									<i class="sub-angle fe fe-chevron-down"></i>
-								</a>
-								<ul class="sub-slide-menu">
-									<li><a class="sub-slide-item" href="{{ route('category.index') }}">{{ trans('main.List') }} {{ trans('main.Categories') }}</a></li>
-									<li><a class="sub-slide-item" href="{{ route('category.archived') }}">{{ trans('main.Archive') }} {{ trans('main.Categories') }}</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li> --}}
 
 
-					@can('المستخدمين')
-						<li class="side-item side-item-category">المستخدمين</li>
+					<!-- admins & roles -->
+					{{-- @can('المديرين والأدوار') --}}
+						<li class="side-item side-item-category">{{ trans('main.Admins') }}</li>
 						<li class="slide">
 							<a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
 								<svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24">
@@ -65,24 +45,24 @@
 									<path d="M15 11V4H4v8.17l.59-.58.58-.59H6z" opacity=".3" />
 									<path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-5 7c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10zM4.59 11.59l-.59.58V4h11v7H5.17l-.58.59z" />
 								</svg>
-								<span class="side-menu__label">المستخدمين</span>
+								<span class="side-menu__label">{{ trans('main.Admins & Roles') }}</span>
 								<i class="angle fe fe-chevron-down"></i>
 							</a>
 							<ul class="slide-menu">
-								@can('قائمة المستخدمين')
+								{{-- @can('عرض المديرين') --}}
 									<li>
-										<a class="slide-item" href="{{ url('/' . ($page = 'users')) }}">قائمة المستخدمين</a>
+										<a class="slide-item" href="{{ route('admins.index') }}">{{ trans('main.Admins') }}</a>
 									</li>
-								@endcan
+								{{-- @endcan --}}
 
-								@can('صلاحيات المستخدمين')
+								{{-- @can('عرض الأدوار') --}}
 									<li>
-										<a class="slide-item" href="{{ url('/' . ($page = 'roles')) }}">صلاحيات المستخدمين</a>
+										<a class="slide-item" href="{{ route('roles.index') }}">{{ trans('main.Roles') }}</a>
 									</li>
-								@endcan
+								{{-- @endcan --}}
 							</ul>
 						</li>
-					@endcan
+					{{-- @endcan --}}
 
 
 

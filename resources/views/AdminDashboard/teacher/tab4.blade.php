@@ -13,7 +13,7 @@
                     <?php $i++; ?>
                     <tr>
                         <td class="text-center">{{ $i }}</td>
-                        <th class="text-center">{{ $item->user->last_name }} {{ $item->user->first_name }}</th>
+                        <th class="text-center">{{ $item->user->full_name }}</th>
                     </tr>
                 @endforeach
             @else

@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use Database\Seeders\AdminDashboard\AdminSeeder;
+use Database\Seeders\AdminDashboard\PermissionTableSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,7 +16,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(PermissionTableSeeder::class);
-        $this->call(CreateAdminUserSeeder::class);
-        // $this->call(UserSeeder::class);
+        $this->call(AdminSeeder::class);
     }
 }

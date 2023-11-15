@@ -54,12 +54,17 @@ return [
     'VIEW ALL' => 'عرض الكل',
     'No Notifications' => 'لا توجد إشعارات',
     
+    //Admin & Roles
+    'Admins & Roles' => 'المديرين والأدوار',
+    'Admins' => 'المديرين',
+    'Admin' => 'المدير',
+    'Role' => 'الدور',
+    'Roles' => 'الأدوار',
+
     //User
     'Users' => 'الطلاب',
     'User' => 'الطالب',
     'Status' => 'الحالة',
-    'Role' => 'الدور',
-    'Roles' => 'الصلاحيات',
     'Back' => 'رجوع',
     'Active' => 'مفعل',
     'InActive' => 'غير مفعل',

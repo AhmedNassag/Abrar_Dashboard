@@ -111,8 +111,7 @@
                                                 <input name="select_all" id="example-select-all" type="checkbox" onclick="CheckAll('box1', this)"  oninput="showBtnDeleteSelected()">
                                             </th> --}}
                                             <th class="text-center border-bottom-0 notPrint">#</th>
-                                            <th class="text-center border-bottom-0">{{ trans('main.first_name')}}</th>
-                                            <th class="text-center border-bottom-0">{{ trans('main.last_name')}}</th>
+                                            <th class="text-center border-bottom-0">{{ trans('main.name')}}</th>
                                             <th class="text-center border-bottom-0">{{ trans('main.country')}}</th>
                                             <th class="text-center border-bottom-0">{{ trans('main.phone')}}</th>
                                             <th class="text-center border-bottom-0">{{ trans('main.busy')}}</th>
@@ -132,8 +131,7 @@
                                                     <td class="text-center notPrint">
                                                         <input id="delete_selected_input" type="checkbox" value="{{ $item->id }}" class="box1 mr-3" oninput="showBtnDeleteSelected()"> {{ $i }}
                                                     </td>
-                                                    <td class="text-center">{{ $item->first_name }}</td>
-                                                    <td class="text-center">{{ $item->last_name }}</td>
+                                                    <td class="text-center">{{ $item->full_name }}</td>
                                                     <td class="text-center">{{ app()->getLocale() == 'ar' ? $item->country->ar_name : $item->country->en_name }}</td>
                                                     <td class="text-center">{{ $item->phone }}</td>
                                                     <td class="text-center">
